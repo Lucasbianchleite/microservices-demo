@@ -256,9 +256,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  labels:
-    app: frontend
 spec:
+  replicas: 4  
   selector:
     matchLabels:
       app: frontend
@@ -679,7 +678,7 @@ spec:
   selector:
     matchLabels:
       app: loadgenerator
-  replicas: 4
+  replicas: 1
   template:
     metadata:
       labels:
